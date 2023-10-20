@@ -54,7 +54,7 @@ const App: React.FC = () => {
   }, []);
 
   // Filter male and female ownerData
-  // Use your filterPets function to filter ownerData
+  // Use filterPets function to filter ownerData
   const maleOwnerPets = filterPets(ownerData, 'Male', 'Cat');
   const femaleOwnerPets = filterPets(ownerData, 'Female', 'Cat');
 

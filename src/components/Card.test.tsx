@@ -5,9 +5,9 @@ describe('Card Component', () => {
   it('renders the component with loading skeleton', () => {
     render(<Card ownersGender='Male' pets={[]} isLoading={true} />);
 
-    // Owner's gender should not be displayed
-    const genderElement = screen.queryByText('Male');
-    expect(genderElement).toBeNull();
+    // Skeleton loader should be displayed
+    const skeletonLoader = screen.getByTestId('skeleton-loader');
+    expect(skeletonLoader).toBeVisible();
   });
 
   it('renders the component with data', () => {
