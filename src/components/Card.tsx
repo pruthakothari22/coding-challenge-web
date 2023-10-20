@@ -16,11 +16,13 @@ const CardContainer = styled.div`
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 16px;
-  max-width: 300px;
+  max-width: 250px;
+  width: 100%;
   text-align: center;
+  margin: 16px auto;
   @media (min-width: 768px) {
-    width: 300px;
+    max-width: 300px;
+    margin: 16px;
   }
 `;
 
@@ -85,9 +87,9 @@ const Card: React.FC<CardProps> = ({ isLoading, ownersGender, pets }) => {
     return (
       <CardContainer>
         <SkeletonHeader />
-        <SkeletonLoader />
-        <SkeletonLoader />
-        <SkeletonLoader />
+        {Array.from({ length: 3 }, (_, index) => (
+          <SkeletonLoader key={index} />
+        ))}
       </CardContainer>
     );
   }
