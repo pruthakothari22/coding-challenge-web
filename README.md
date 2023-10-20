@@ -39,3 +39,45 @@ Jasper
 Notes
 
 ```
+
+## Development Server
+
+To run the development server, follow these steps:
+
+1. Navigate to the root directory of the project in your terminal.
+
+2. Run the following command to install all the required packages using Yarn:
+
+   ```bash
+   yarn
+   ```
+
+3. Start the development server with the following command:
+
+   ```bash
+   yarn start
+   ```
+
+This will launch the development server, and your application will open in your default web browser on `localhost:3000`.
+
+## Running Tests
+
+To run tests for the application, use the following command:
+
+```bash
+yarn test
+```
+
+## Setting Up the API Endpoint
+
+1. **Create an `.env` File**: If you don't already have one, create a new file in your project's root directory and name it `.env`. This file will be used to store your environment variables.
+
+2. **Define the API Endpoint**: Open the `.env` file in a text editor of your choice and add the following line, replacing `your-api-url-here.com` with the actual API endpoint:
+
+   ```plaintext
+   REACT_APP_API_URL=https://your-api-url-here.com
+   ```
+
+3. **Save the .env File**: Save the changes to the .env file.
+
+4. **Restart Your Development Server**: To apply the new environment variable, you may need to restart your development server if it's already running. Stop the server and then restart it.
