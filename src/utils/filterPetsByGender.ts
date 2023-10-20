@@ -9,7 +9,11 @@ export function filterPets(
   const filteredPets = data
     .filter((person) => person.gender.toLowerCase() === gender.toLowerCase())
     .flatMap((person) =>
-      person.pets ? person.pets.filter((pet) => pet.type === petType) : []
+      person.pets
+        ? person.pets.filter(
+            (pet) => pet.type.toLowerCase() === petType.toLocaleLowerCase()
+          )
+        : []
     );
 
   // Extract and sort pet names alphabetically

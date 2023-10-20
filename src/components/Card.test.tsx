@@ -6,7 +6,7 @@ describe('Card Component', () => {
     render(<Card ownersGender='Male' pets={[]} isLoading={true} />);
 
     // Owner's gender should not be displayed
-    const genderElement = screen.queryByText('Male'); // Use queryByText to check that the text is not present
+    const genderElement = screen.queryByText('Male');
     expect(genderElement).toBeNull();
   });
 

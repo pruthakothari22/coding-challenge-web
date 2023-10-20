@@ -6,7 +6,7 @@ interface ErrorToastProps {
 }
 
 const ErrorContainer = styled.div`
-  background: #e63f3f; /* Red background color */
+  background: #e63f3f;
   color: white;
   padding: 10px;
   text-align: center;
@@ -14,12 +14,12 @@ const ErrorContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* Ensure it's displayed above other content */
+  z-index: 999;
 `;
 
 const ErrorToast: React.FC<ErrorToastProps> = ({ error }) => {
   if (!error) {
-    return null; // Don't render anything if there's no error
+    return null;
   }
 
   return <ErrorContainer>{error}</ErrorContainer>;

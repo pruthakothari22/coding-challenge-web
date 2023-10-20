@@ -26,6 +26,7 @@ const CardContainer = styled.div`
   }
 `;
 
+// Header for the Card
 const Header = styled.div`
   display: flex;
   background: #e63f3f;
@@ -39,6 +40,7 @@ const Header = styled.div`
   font-size: 24px;
 `;
 
+// List item style
 const ListItem = styled.li`
   list-style: none;
   align-items: center;
@@ -46,12 +48,14 @@ const ListItem = styled.li`
   margin: 8px;
 `;
 
+// Unordered list style
 const ListItemUl = styled.ul`
   padding: 0;
 `;
 
+// Skeleton for the Header
 const SkeletonHeader = styled.div`
-  background: #f0f0f0; /* Background color for the skeleton header */
+  background: #f0f0f0;
   margin: 0;
   border-radius: 10px 10px 0 0;
   padding: 8px;
@@ -59,6 +63,7 @@ const SkeletonHeader = styled.div`
   margin-bottom: 24px;
 `;
 
+// Skeleton Loader style
 const SkeletonLoader = styled.div`
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;

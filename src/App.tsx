@@ -20,8 +20,12 @@ const App: React.FC = () => {
   const [ownerData, setOwnerData] = useState([]);
   const [error, setError] = useState('');
 
+  // Function to fetch data from the API
   const fetchData = async () => {
+    // Get the API URL from the environment variables
     const apiUrl = process.env.REACT_APP_API_URL;
+
+    // Check if the API URL is defined
     if (!apiUrl) {
       setError('API URL is not defined');
       setIsLoading(false);
@@ -29,7 +33,9 @@ const App: React.FC = () => {
     }
 
     try {
+      // Fetch data from the API
       const res = await axios.get(apiUrl);
+      // Check if the response has data
       if (!res.data) {
         setError('No data available');
       } else {
@@ -42,6 +48,7 @@ const App: React.FC = () => {
     }
   };
 
+  // Fetch data when the component mounts
   useEffect(() => {
     fetchData();
   }, []);
@@ -53,6 +60,7 @@ const App: React.FC = () => {
 
   return (
     <CardWrapper>
+      {/* Display error message if there is an error */}
       <ErrorToast error={error} />
       {maleOwnerPets.length > 0 && (
         <Card pets={maleOwnerPets} ownersGender='Male' isLoading={isLoading} />
