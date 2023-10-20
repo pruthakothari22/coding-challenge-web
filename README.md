@@ -13,7 +13,7 @@ You need to:
 - Write some code to consume the json hosted on the above web service.
 - Output a list of all the cats in alphabetical order under a heading of the gender of their owner.
 - Output must be presentable on a web browser.
-- Submissions will only be accepted via GitHub or Bitbucket test commit.
+- Submissions will only be accepted via GitHub or Bitbucket.
 
 Please note:
 
