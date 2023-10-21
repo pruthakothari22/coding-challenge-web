@@ -53,22 +53,24 @@ const App: React.FC = () => {
     fetchData();
   }, []);
 
-  // Filter male and female ownerData
   // Use filterPets function to filter ownerData
-  const maleOwnerPets = filterPets(ownerData, 'Male', 'Cat');
-  const femaleOwnerPets = filterPets(ownerData, 'Female', 'Cat');
+  const ownersPets = filterPets(ownerData, 'Cat');
 
   return (
     <CardWrapper>
       {/* Display error message if there is an error */}
       <ErrorToast error={error} />
-      {maleOwnerPets.length > 0 && (
-        <Card pets={maleOwnerPets} ownersGender='Male' isLoading={isLoading} />
-      )}
-      {femaleOwnerPets.length > 0 && (
+      {ownersPets?.male?.length > 0 && (
         <Card
+          pets={ownersPets.male}
+          ownersGender='Male'
+          isLoading={isLoading}
+        />
+      )}
+      {ownersPets?.female?.length > 0 && (
+        <Card
+          pets={ownersPets.female}
           ownersGender='Female'
-          pets={femaleOwnerPets}
           isLoading={isLoading}
         />
       )}
